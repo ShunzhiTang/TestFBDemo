@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import <FBsdkcorekit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface ViewController ()
 
@@ -28,6 +30,12 @@
 - (IBAction)login:(UIButton *)sender {
     
     NSLog(@" 登录facebook");
+    
+    FBSDKLoginButton *login = [[FBSDKLoginButton alloc] init];
+    
+    login.center = self.view.center;
+    
+    [self.view addSubview:login];
     
     
 }

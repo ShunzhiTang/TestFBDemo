@@ -13,6 +13,9 @@
 		245064C61C2A379A007CEE01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245064C41C2A379A007CEE01 /* Main.storyboard */; };
 		245064C81C2A379A007CEE01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 245064C71C2A379A007CEE01 /* Assets.xcassets */; };
 		245064CB1C2A379A007CEE01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245064C91C2A379A007CEE01 /* LaunchScreen.storyboard */; };
+		245064D41C2A453A007CEE01 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245064D31C2A453A007CEE01 /* FBSDKCoreKit.framework */; };
+		245064D61C2A4545007CEE01 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245064D51C2A4545007CEE01 /* FBSDKLoginKit.framework */; };
+		245064D81C2A4554007CEE01 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245064D71C2A4554007CEE01 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		245064C71C2A379A007CEE01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		245064CA1C2A379A007CEE01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		245064CC1C2A379A007CEE01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		245064D31C2A453A007CEE01 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		245064D51C2A4545007CEE01 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		245064D71C2A4554007CEE01 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245064D61C2A4545007CEE01 /* FBSDKLoginKit.framework in Frameworks */,
+				245064D41C2A453A007CEE01 /* FBSDKCoreKit.framework in Frameworks */,
+				245064D81C2A4554007CEE01 /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +67,7 @@
 		245064BA1C2A379A007CEE01 /* TestFBDemo */ = {
 			isa = PBXGroup;
 			children = (
+				245064D21C2A41F4007CEE01 /* FacebookFramework */,
 				245064BE1C2A379A007CEE01 /* AppDelegate.h */,
 				245064BF1C2A379A007CEE01 /* AppDelegate.m */,
 				245064C11C2A379A007CEE01 /* ViewController.h */,
@@ -77,6 +87,16 @@
 				245064BC1C2A379A007CEE01 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		245064D21C2A41F4007CEE01 /* FacebookFramework */ = {
+			isa = PBXGroup;
+			children = (
+				245064D71C2A4554007CEE01 /* FBSDKShareKit.framework */,
+				245064D51C2A4545007CEE01 /* FBSDKLoginKit.framework */,
+				245064D31C2A453A007CEE01 /* FBSDKCoreKit.framework */,
+			);
+			name = FacebookFramework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +283,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestFBDemo",
+				);
 				INFOPLIST_FILE = TestFBDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sixiang.TestFBDemo;
@@ -274,6 +298,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestFBDemo",
+				);
 				INFOPLIST_FILE = TestFBDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sixiang.TestFBDemo;
