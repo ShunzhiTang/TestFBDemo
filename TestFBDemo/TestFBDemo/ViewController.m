@@ -24,4 +24,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)login:(UIButton *)sender {
+    
+    NSLog(@" 登录facebook");
+    
+    
+}
+
+
 @end
